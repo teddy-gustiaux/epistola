@@ -35,6 +35,58 @@
 \setmainfont{Linux Biolinum O}
 \geometry{hmargin=1.25cm,vmargin=0.75cm,nomarginpar}
 
+\AtBeginDocument{
+	\begin{letter}{Madame Dupont\\84, rue Victor Hugo\\31000 Toulouse}
+	% Pas de fax
+	\nofax
+	% Lettre française
+	\francais
+	% Page vide
+	\pagestyle{empty}
+	
+	% Icône pour le téléhpone
+	\renewcommand{\tellabelname}{\faPhone~~}
+	
+	% Icône pour le courriel
+	\renewcommand{\emaillabelname}{\faEnvelope~~}
+	
+	% Marge du côté gauche
+	\marge{10mm}                   % Default: 15mm
+	% Espace entre les blocs : -6 très serré, 6 moins serré
+	\tension{6}
+	
+	% Espacement vertical entre texte et signature
+	\def\sigspace{1.5cm}           % Default: 1.5cm
+	
+	% Boîte d'en-tête
+	\def\pict@let@width{185}       % Default: 185
+	\def\pict@let@height{65}       % Default: 65
+	\def\pict@let@hoffset{-20}     % Default: 0
+	\def\pict@let@voffset{20}      % Default: 0
+	
+	% Trait de pliage
+	\def\rule@hpos{-35}            % Default: -25
+	\def\rule@vpos{0}              % Default: -15
+	\def\rule@length{5}            % Default: 10
+	
+	% Adresse de l'expéditeur
+	\def\fromaddress@let@hpos{-10} % Default: -10
+	\def\fromaddress@let@vpos{80}  % Default: 70
+	\fromaddress@let@width=69mm    % Default: 69
+	
+	% Lieu d'expédition
+	\def\fromlieu@let@hpos{90}     % Default: 90
+	\def\fromlieu@let@vpos{0}      % Default: 62
+	\fromlieu@let@width=69mm       % Default: 69
+	
+	% Adresse du destinataire
+	\def\toaddress@let@hpos{90}    % Default: 90
+	\def\toaddress@let@vpos{40}    % Default: 40
+	\toaddress@let@width=80mm      % Default: 80
+}
+
+\AtEndDocument{\end{letter}}
+
 % =======================================
 % COMMANDS
 % =======================================
@@ -46,57 +98,6 @@
         \closing{#1}%
         \includegraphics[scale=0.75]{signature.jpg}%
     }%
-}
-
-% Commande pour la personnalisation
-\newcommand{\customize}{%
-
-    % Pas de fax
-    \nofax
-    % Lettre française
-    \francais
-    % Page vide
-    \pagestyle{empty}
-
-    % Icône pour le téléhpone
-    \renewcommand{\tellabelname}{\faPhone~~}
-
-    % Icône pour le courriel
-    \renewcommand{\emaillabelname}{\faEnvelope~~}
-
-    % Marge du côté gauche
-    \marge{10mm}                   % Défaut : 15mm
-    % Espace entre les blocs : -6 très serré, 6 moins serré
-    \tension{6}
-
-    % Espacement vertical entre texte et signature
-    \def\sigspace{1.5cm}           % Défaut : 1.5cm
-
-    % Boîte d'en-tête
-    \def\pict@let@width{185}       % Défaut : 185
-    \def\pict@let@height{65}       % Défaut : 65
-    \def\pict@let@hoffset{-20}     % Défaut : 0
-    \def\pict@let@voffset{20}      % Défaut : 0
-
-    % Trait de pliage
-    \def\rule@hpos{-35}            % Défaut : -25
-    \def\rule@vpos{0}              % Défaut : -15
-    \def\rule@length{5}            % Défaut : 10
-
-    % Adresse de l'expéditeur
-    \def\fromaddress@let@hpos{-10} % Défaut : -10
-    \def\fromaddress@let@vpos{80}  % Défaut : 70
-    \fromaddress@let@width=69mm    % Défaut : 69
-
-    % Lieu d'expédition
-    \def\fromlieu@let@hpos{90}     % Défaut : 90
-    \def\fromlieu@let@vpos{0}      % Défaut : 62
-    \fromlieu@let@width=69mm       % Défaut : 69
-
-    % Adresse du destinataire
-    \def\toaddress@let@hpos{90}    % Défaut : 90
-    \def\toaddress@let@vpos{40}    % Défaut : 40
-    \toaddress@let@width=80mm      % Défaut : 80
 }
 
 % =======================================
