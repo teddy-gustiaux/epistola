@@ -1,16 +1,20 @@
+% =======================================
+% IDENTIFICATION
+% =======================================
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{epistola}[2017/11/08 Epistola Letter Class]
 
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{moderncv}}
+% =======================================
+% TEMPLATE SETTINGS AND OPTIONS
+% =======================================
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{lettre}}
 \ProcessOptions\relax
 \LoadClass[]{lettre}
 
+% =======================================
+% PACKAGES
+% =======================================
 \RequirePackage{nag}
-\RequirePackage{ifplatform}
-\RequirePackage{fontawesome}
-\ifwindows
-    \newfontfamily{\FA}{fontawesome.otf}
-\fi
 \RequirePackage{fontawesome}
 \RequirePackage{eurosym}
 \RequirePackage[a4paper]{geometry}
@@ -23,9 +27,17 @@
 \RequirePackage[unicode,pdfencoding=auto,bookmarks=false]{hyperref}
 \RequirePackage{hyperxmp}
 
+% =======================================
+% SETTINGS
+% =======================================
+
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Linux Biolinum O}
 \geometry{hmargin=1.25cm,vmargin=0.75cm,nomarginpar}
+
+% =======================================
+% COMMANDS
+% =======================================
 
 % Commande pour la fermeture de la lettre
 \newcommand{\close}[1]{%
@@ -86,6 +98,10 @@
     \def\toaddress@let@vpos{40}    % Défaut : 40
     \toaddress@let@width=80mm      % Défaut : 80
 }
+
+% =======================================
+% METADATA
+% =======================================
 
 \hypersetup{%
     unicode = true,%
