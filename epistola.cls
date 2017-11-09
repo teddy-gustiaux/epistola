@@ -7,6 +7,8 @@
 % =======================================
 % TEMPLATE SETTINGS AND OPTIONS
 % =======================================
+\newif\if@french\@frenchfalse
+\DeclareOption{french}{\@frenchtrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{lettre}}
 \ProcessOptions\relax
 \LoadClass[]{lettre}
@@ -22,8 +24,10 @@
 \RequirePackage{microtype}
 \RequirePackage{lipsum}
 \RequirePackage{xunicode}
-\RequirePackage[french]{babel}
-\RequirePackage[french]{isodate}
+\if@french
+	\RequirePackage[french]{babel}
+	\RequirePackage[french]{isodate}
+\fi
 \RequirePackage[unicode,pdfencoding=auto,bookmarks=false]{hyperref}
 \RequirePackage{hyperxmp}
 
