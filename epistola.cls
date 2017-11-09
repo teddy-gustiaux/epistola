@@ -31,55 +31,46 @@
 % SETTINGS
 % =======================================
 
+% -- FONTS --
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Linux Biolinum O}
+
+% -- LAYOUT --
 \geometry{hmargin=1.25cm,vmargin=0.75cm,nomarginpar}
 
 \AtBeginDocument{
 	\begin{letter}{Madame Dupont\\84, rue Victor Hugo\\31000 Toulouse}
-	% Pas de fax
+	
 	\nofax
-	% Lettre française
 	\francais
-	% Page vide
 	\pagestyle{empty}
-	
-	% Icône pour le téléhpone
 	\renewcommand{\tellabelname}{\faPhone~~}
-	
-	% Icône pour le courriel
 	\renewcommand{\emaillabelname}{\faEnvelope~~}
 	
-	% Marge du côté gauche
+	% Left margin
 	\marge{10mm}                   % Default: 15mm
-	% Espace entre les blocs : -6 très serré, 6 moins serré
+	% Space between blocks: -6 tighter, 6 looser
 	\tension{6}
-	
-	% Espacement vertical entre texte et signature
+	% Vertical spacing between text and signature
 	\def\sigspace{1cm}            % Default: 1.5cm
-	
-	% Boîte d'en-tête
+	% Header box
 	\def\pict@let@width{185}       % Default: 185
 	\def\pict@let@height{65}       % Default: 65
 	\def\pict@let@hoffset{-20}     % Default: 0
 	\def\pict@let@voffset{20}      % Default: 0
-	
-	% Trait de pliage
+	% Bending line
 	\def\rule@hpos{-35}            % Default: -25
 	\def\rule@vpos{0}              % Default: -15
 	\def\rule@length{5}            % Default: 10
-	
-	% Adresse de l'expéditeur
+	% Sender adress
 	\def\fromaddress@let@hpos{-10} % Default: -10
 	\def\fromaddress@let@vpos{80}  % Default: 70
 	\fromaddress@let@width=69mm    % Default: 69
-	
-	% Lieu d'expédition
+	% Shipping location
 	\def\fromlieu@let@hpos{90}     % Default: 90
 	\def\fromlieu@let@vpos{0}      % Default: 62
 	\fromlieu@let@width=69mm       % Default: 69
-	
-	% Adresse du destinataire
+	% Recepient address
 	\def\toaddress@let@hpos{90}    % Default: 90
 	\def\toaddress@let@vpos{40}    % Default: 40
 	\toaddress@let@width=80mm      % Default: 80
@@ -93,7 +84,7 @@
 % COMMANDS
 % =======================================
 
-% Commande pour la fermeture de la lettre
+% -- CLOSING --
 \newcommand{\close}[1]{%
 	\par\stopbreaks
 	\par\vspace{2\parskip}%
