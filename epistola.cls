@@ -9,6 +9,10 @@
 % =======================================
 \newif\if@french\@frenchfalse
 \DeclareOption{french}{\@frenchtrue}
+
+\newif\if@signature\@signaturefalse
+\DeclareOption{signature}{\@signaturetrue}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{lettre}}
 \ProcessOptions\relax
 \LoadClass[]{lettre}
@@ -107,7 +111,12 @@
 	\par\vspace*{\sigspace}%
 	\hspace*{\ssigindent}%
 	\noindent
-	\parbox[t]{\ssigwidth}{\centering \ignorespaces\fromname\\\includegraphics[scale=0.75]{signature.jpg}}
+	\parbox[t]{\ssigwidth}{
+		\centering \ignorespaces\fromname\\%
+		\if@signature
+			\includegraphics[scale=0.75]{signature}%
+		\fi
+	}
 	\par\vfill\startbreaks
 }
 
