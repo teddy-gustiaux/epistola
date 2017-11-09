@@ -43,6 +43,9 @@
 \geometry{hmargin=1.25cm,vmargin=0.75cm,nomarginpar}
 
 \AtBeginDocument{
+	
+	\institut{information}
+	
 	\begin{letter}{\@recipient}
 	
 	\nofax
