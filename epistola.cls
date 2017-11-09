@@ -39,7 +39,7 @@
 \geometry{hmargin=1.25cm,vmargin=0.75cm,nomarginpar}
 
 \AtBeginDocument{
-	\begin{letter}{Madame Dupont\\84, rue Victor Hugo\\31000 Toulouse}
+	\begin{letter}{\@recipient}
 	
 	\nofax
 	\francais
@@ -83,6 +83,11 @@
 % =======================================
 % COMMANDS
 % =======================================
+
+% -- LETTER INFORMATION --
+\newcommand*{\recipient}[1]{\def\@recipient{#1}}
+\newcommand*{\phone}[1]{\def\@phone{#1} \telephone{#1}}
+\newcommand*{\object}[1]{\def\@object{\textbf{#1}} \conc{\textbf{#1}}}
 
 % -- CLOSING --
 \newcommand{\close}[1]{%
