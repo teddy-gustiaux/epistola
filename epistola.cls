@@ -105,7 +105,7 @@
 
 \hypersetup{%
     unicode = true,%
-    pdftitle = {Lettre},%
+    pdftitle = {},%
     pdfauthor = {},%
     pdfcreator = {XeLaTeX},%
     bookmarksnumbered = true,%
