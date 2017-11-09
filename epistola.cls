@@ -56,7 +56,7 @@
 	\tension{6}
 	
 	% Espacement vertical entre texte et signature
-	\def\sigspace{1.5cm}           % Default: 1.5cm
+	\def\sigspace{1cm}            % Default: 1.5cm
 	
 	% Boîte d'en-tête
 	\def\pict@let@width{185}       % Default: 185
@@ -85,7 +85,9 @@
 	\toaddress@let@width=80mm      % Default: 80
 }
 
-\AtEndDocument{\end{letter}}
+\AtEndDocument{%
+	\end{letter}%
+}
 
 % =======================================
 % COMMANDS
@@ -93,11 +95,17 @@
 
 % Commande pour la fermeture de la lettre
 \newcommand{\close}[1]{%
-	 \flushright
-    \setlength{\parskip}{1pt}{%
-        \closing{#1}%
-        \includegraphics[scale=0.75]{signature.jpg}%
-    }%
+	\par\stopbreaks
+	\par\vspace{2\parskip}%
+	\nobreak
+	\noindent
+    \parbox[t]{\letterwidth}{#1}%
+	\par\vspace*{\parskip}%
+	\par\vspace*{\sigspace}%
+	\hspace*{\ssigindent}%
+	\noindent
+	\parbox[t]{\ssigwidth}{\centering \ignorespaces\fromname\\\includegraphics[scale=0.75]{signature.jpg}}
+	\par\vfill\startbreaks
 }
 
 % =======================================
