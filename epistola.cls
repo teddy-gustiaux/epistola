@@ -53,7 +53,9 @@
 	\begin{letter}{\@recipient}
 	
 	\nofax
-	\francais
+	\if@french
+		\francais
+	\fi
 	\pagestyle{empty}
 	\renewcommand{\tellabelname}{\faPhone~~}
 	\renewcommand{\emaillabelname}{\faEnvelope~~}
