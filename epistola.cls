@@ -149,11 +149,18 @@
 \newcommand*{\phone}[1]{
 	\def\@phone{#1} \telephone{#1}
 	\if@english
-		\let\oldaddress\fromaddress
-		\def\fromaddress{%
-			\oldaddress\\[1em]
-			\faPhone~~~#1\\[0.5em]
-		}
+		\ifx\@phone\empty
+			% No phone provided
+		\else
+			\let\oldaddress\fromaddress
+			\def\fromaddress{%
+				\oldaddress\\[1em]
+				\faPhone~~~#1
+				\ifx\@email\empty
+					\\[0.5em]
+				\fi
+			}
+		\fi
 	\fi
 }
 \newcommand*{\object}[1]{\def\@object{\textbf{#1}} \conc{\textbf{#1}}}
@@ -197,10 +204,28 @@
 		\par\vfill\startbreaks
 	}
 
-
 \fi
 
 \if@english
+
+	\newcommand*{\email}[1]{
+		\def\@email{#1}
+		\ifx\@email\empty
+			% No email provided
+		\else
+			\let\existingaddress\fromaddress
+			\def\fromaddress{%
+				\existingaddress
+				\ifx\@phone\empty
+					\\[1em]
+				\else
+					\\
+				\fi
+				\faEnvelopeO~~{\ttfamily#1}\\[0.5em]
+			}
+		\fi
+	}
+
 	\renewcommand{\closing}[1]{\par\nobreak\vspace{\parskip}%
 		\stopbreaks
 		\noindent
@@ -216,6 +241,7 @@
 		}%
 		\par%
 	}
+
 \fi
 
 % =======================================
