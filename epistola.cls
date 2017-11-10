@@ -146,7 +146,16 @@
 		\def\fromaddress{#1\\#2\\#3}
 	\fi
 }
-\newcommand*{\phone}[1]{\def\@phone{#1} \telephone{#1}}
+\newcommand*{\phone}[1]{
+	\def\@phone{#1} \telephone{#1}
+	\if@english
+		\let\oldaddress\fromaddress
+		\def\fromaddress{%
+			\oldaddress\\[1em]
+			\faPhone~~~#1\\[0.5em]
+		}
+	\fi
+}
 \newcommand*{\object}[1]{\def\@object{\textbf{#1}} \conc{\textbf{#1}}}
 \if@french
 
