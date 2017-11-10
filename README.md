@@ -15,14 +15,13 @@
 
 ## Disclaimer
 
-Please note that there is not an universal letter layout standard (especially in English). This class might not meeting your own exact layout requirements, as it has been originally developped for personal use. Thank you for your understanding!
+Please note that there is not an universal letter layout standard (especially in English). This class might not meet your own exact layout requirements, as it has been originally developped for personal use. Thank you for your understanding!
 
 ## Preview
 
 | English | French |
 |:---:|:---:|
 | [![English template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-english/template-english.png)](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-english/template-english.pdf)  | [![French template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-french/template-french.png)](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-french/template-french.pdf) |
-| | |
 
 ## License
 
