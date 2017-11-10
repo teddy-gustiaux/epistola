@@ -2,7 +2,7 @@
 % IDENTIFICATION
 % =======================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{epistola}[2017/11/08 Epistola Letter Class]
+\ProvidesClass{epistola}[2017/11/10 Epistola Letter Class]
 
 % =======================================
 % TEMPLATE SETTINGS AND OPTIONS
