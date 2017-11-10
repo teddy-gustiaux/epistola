@@ -70,10 +70,6 @@
 
 \AtBeginDocument{
 	
-	\if@french
-		\institut{information}
-	\fi
-	
 	\begin{letter}{\@recipient}
 	
 	\if@french
@@ -81,7 +77,7 @@
 		\nofax
 		\pagestyle{empty}
 		\renewcommand{\tellabelname}{\faPhone~~}
-		\renewcommand{\emaillabelname}{\faEnvelope~~}
+		\renewcommand{\emaillabelname}{\faEnvelopeO~~}
 		
 		% Left margin
 		\marge{0mm}                   % Default: 15mm
