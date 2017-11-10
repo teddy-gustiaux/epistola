@@ -2,8 +2,8 @@
 
 *Simple LaTeX class for letters (both French and English).*
 
-[![English example](https://img.shields.io/badge/English%20example-pdf-yellow.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![French example](https://img.shields.io/badge/French%20example-pdf-green.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+[![English example](https://img.shields.io/badge/English%20example-pdf-yellow.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/blob/master/template-english/template-english.pdf)
+[![French example](https://img.shields.io/badge/French%20example-pdf-green.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/blob/master/template-french/template-french.pdf
 [![GitHub release](https://img.shields.io/github/release/teddy-gustiaux/epistola.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/releases)
 [![License](https://img.shields.io/badge/License-MIT-lightrey.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 ## Options
@@ -21,7 +21,7 @@ Please note that there is not an universal letter layout standard (especially in
 
 | English | French |
 |:---:|:---:|
-| [![English template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-english/template-english.png)](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-english/template-english.pdf)  | [![French template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-french/template-french.png)](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-french/template-french.pdf) |
+| [![English template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-english/template-english.png)](https://github.com/teddy-gustiaux/epistola/blob/master/template-english/template-english.pdf)  | [![French template](https://raw.githubusercontent.com/teddy-gustiaux/epistola/master/template-french/template-french.png)](https://github.com/teddy-gustiaux/epistola/blob/master/template-french/template-french.pdf) |
 
 ## License
 
