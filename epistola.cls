@@ -16,6 +16,9 @@
 \newif\if@signature\@signaturefalse
 \DeclareOption{signature}{\@signaturetrue}
 
+\newif\if@boldnames\@boldnamesfalse
+\DeclareOption{boldnames}{\@boldnamestrue}
+
 \ProcessOptions\relax
 \if@french
 	\DeclareOption*{\PassOptionsToClass{\CurrentOption}{lettre}}
@@ -76,7 +79,7 @@
 		\francais
 		\nofax
 		\pagestyle{empty}
-		\renewcommand{\tellabelname}{\faPhone~~}
+		\renewcommand{\tellabelname}{\faPhone~~~}
 		\renewcommand{\emaillabelname}{\faEnvelopeO~~}
 		
 		% Left margin
@@ -125,7 +128,24 @@
 % =======================================
 
 % -- LETTER INFORMATION --
-\newcommand*{\recipient}[1]{\def\@recipient{#1}}
+\newcommand*{\recipient}[3]{
+	\if@boldnames
+		\def\@recipient{\textbf{#1}\\#2\\#3}
+	\else
+		\def\@recipient{#1\\#2\\#3}
+	\fi
+}
+\renewcommand*{\address}[3]{
+	\if@boldnames
+		\if@french
+			\def\fromaddress{\textbf{#1}\\#2\\#3}
+		\else
+			\def\fromaddress{#1\\#2\\#3}
+		\fi
+	\else
+		\def\fromaddress{#1\\#2\\#3}
+	\fi
+}
 \newcommand*{\phone}[1]{\def\@phone{#1} \telephone{#1}}
 \newcommand*{\object}[1]{\def\@object{\textbf{#1}} \conc{\textbf{#1}}}
 \if@french
