@@ -3,7 +3,7 @@
 *Simple LaTeX class for letters (both French and English).*
 
 [![English example](https://img.shields.io/badge/English%20example-pdf-yellow.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/blob/master/template-english/template-english.pdf)
-[![French example](https://img.shields.io/badge/French%20example-pdf-green.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/blob/master/template-french/template-french.pdf
+[![French example](https://img.shields.io/badge/French%20example-pdf-green.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/blob/master/template-french/template-french.pdf)
 [![GitHub release](https://img.shields.io/github/release/teddy-gustiaux/epistola.svg?style=flat-square)](https://github.com/teddy-gustiaux/epistola/releases)
 [![License](https://img.shields.io/badge/License-MIT-lightrey.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 ## Options
