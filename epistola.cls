@@ -62,6 +62,7 @@
 % -- FONTS --
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Linux Biolinum O}
+\newfontfamily{\FA}{[FontAwesome.otf]}
 
 % -- LAYOUT --
 \if@french
