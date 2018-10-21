@@ -34,8 +34,9 @@
 % =======================================
 % PACKAGES
 % =======================================
+\RequirePackage{fontspec}
 \RequirePackage{nag}
-\RequirePackage{fontawesome}
+\RequirePackage[fixed]{fontawesome5}
 \RequirePackage{eurosym}
 \RequirePackage{numprint}
 \RequirePackage{microtype}
@@ -62,7 +63,6 @@
 % -- FONTS --
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Linux Biolinum O}
-\newfontfamily{\FA}{[FontAwesome.otf]}
 
 % -- LAYOUT --
 \if@french
@@ -81,7 +81,7 @@
 		\nofax
 		\pagestyle{empty}
 		\renewcommand{\tellabelname}{\faPhone~~~}
-		\renewcommand{\emaillabelname}{\faEnvelopeO~~}
+		\renewcommand{\emaillabelname}{\faEnvelope[regular]~~}
 		
 		% Left margin
 		\marge{0mm}                   % Default: 15mm
@@ -222,7 +222,7 @@
 				\else
 					\\
 				\fi
-				\faEnvelopeO~~{\ttfamily#1}\\[0.5em]
+				\faEnvelope[regular]~~{\ttfamily#1}\\[0.5em]
 			}
 		\fi
 	}
